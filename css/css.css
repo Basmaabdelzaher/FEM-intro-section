@@ -16,12 +16,17 @@ p {
     size: 18px;
 }
 
-nav a {
+a:hover {
+    text-decoration: none;
+}
+nav a, #sideMenu a {
     color: var(--medium-gray);
 }
-
+nav a:hover {
+    color: #000;
+}
 .section-padding {
-    padding: 20px 3%;
+    padding: 20px 4%;
 }
 
 .light-btn {
@@ -30,10 +35,6 @@ nav a {
    background: transparent;
    border-radius: 9px;
    padding: 5px 12px;
-}
-
-nav a:hover {
-    color: #000;
 }
 
 .light-btn:hover {
@@ -49,6 +50,38 @@ nav a:hover {
 .dropdown img {
     transition: all ease-in-out 0.3s;
 }
-.dropdown.show img {
+.dropdown.show img, .toggler.show img {
     transform: rotate(-180deg);
+}
+.toggler img {
+    transition: all ease-in-out 0.3s;
+}
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+#sideMenuWrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: -100%;  
+}
+#sideMenuWrapper.show {
+    left: 0;
+}
+#sideMenu {
+    background: #fff;
+    width: 70%;
+    height: 100%;
+    margin-left: auto;
+    overflow-y: auto; 
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+#features, #company {
+    display: none;
 }
